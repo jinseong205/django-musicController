@@ -54,7 +54,7 @@ class HomePage extends React.Component {
                     <Route path="/create" component={CreateRoomPage}/>
                     <Route path="/room/:roomCode" component={Room}/>
                 </Switch> 
-            </Router>
+            </Router> 
             )
     }
 }
