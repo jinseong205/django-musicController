@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Grid, Button, Typography} from '@material-ui/core'
 
 class Room extends React.Component{
     constructor(props){
@@ -23,7 +24,7 @@ class Room extends React.Component{
         .then((data) =>{
             self.setState({
                 votesToSkip: data.votes_to_skip,
-                guestCanPause: data.guest_can_pause,
+                guestCanPause: data.guest_can_pause, 
                 isHost:data.is_host
             })
         });
