@@ -14,11 +14,13 @@ class Room extends React.Component {
     };
 
     this.roomCode = this.props.match.params.roomCode;
-    this.getRoomDetails();
+    //
     this.leaveButtonPressed = this.leaveButtonPressed.bind(this);
     this.updateShowSettings = this.updateShowSettings.bind(this);
     this.renderSettingsButton = this.renderSettingsButton.bind(this);
     this.renderSettings = this.renderSettings
+    this.getRoomDetails = this.getRoomDetails.bind(this);
+    this.getRoomDetails();
   }
 
   getRoomDetails() {
@@ -33,7 +35,7 @@ class Room extends React.Component {
         return response.json();
       })
       .then((data) => {
-        self.setState({
+        this.setState({
           votesToSkip: data.votes_to_skip,
           guestCanPause: data.guest_can_pause,
           isHost: data.is_host,
