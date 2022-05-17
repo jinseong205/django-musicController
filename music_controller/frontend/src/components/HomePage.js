@@ -10,6 +10,7 @@ import {
   Link,
   Redirect,
 } from "react-router-dom";
+import Info from "./Info"
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -44,6 +45,9 @@ class HomePage extends React.Component {
             <Button color="primary" to="/join" component={Link}>
               Join a Room{" "}
             </Button>
+            <Button color="default" to="/info" component={Link}>
+              Info
+            </Button>
             <Button color="secondary" to="/create" component={Link}>
               Create a Room{" "}
             </Button>
@@ -75,6 +79,7 @@ class HomePage extends React.Component {
             }}
           ></Route>
           <Route path="/join" component={RoomJoinPage} />
+          <Route path="/info" component={Info}/>
           <Route path="/create" component={CreateRoomPage} />
           <Route
             path="/room/:roomCode"
